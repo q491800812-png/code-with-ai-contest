@@ -1,0 +1,55 @@
+{
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--disable=C0114"
+    ],
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "100"
+    ],
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.rulers": [100]
+    },
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "test_dashboard.py"
+    ],
+    "editor.rulers": [100, 120],
+    "editor.wordWrap": "on",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        ".pytest_cache": true,
+        ".venv": true,
+        "*.egg-info": true,
+        "htmlcov": true,
+        ".coverage": true
+    },
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/node_modules/**": true,
+        "**/.pytest_cache/**": true,
+        "**/__pycache__/**": true
+    },
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "icon": "terminal-cmd"
+        }
+    }
+}

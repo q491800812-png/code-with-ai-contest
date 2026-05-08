@@ -1,0 +1,60 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+        "python.linting.enabled": true,
+        "python.linting.pylintEnabled": true,
+        "python.formatting.provider": "black",
+        "[python]": {
+            "editor.formatOnSave": true,
+            "editor.defaultFormatter": "ms-python.python"
+        },
+        "python.testing.pytestEnabled": true,
+        "python.testing.pytestArgs": [
+            "test_dashboard.py"
+        ]
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "🚀 Run Streamlit Dashboard",
+                "type": "python",
+                "request": "launch",
+                "module": "streamlit",
+                "args": [
+                    "run",
+                    "app.py"
+                ],
+                "justMyCode": true,
+                "console": "integratedTerminal",
+                "cwd": "${workspaceFolder}"
+            },
+            {
+                "name": "🧪 Run Unit Tests",
+                "type": "python",
+                "request": "launch",
+                "module": "pytest",
+                "args": [
+                    "test_dashboard.py",
+                    "-v"
+                ],
+                "justMyCode": true,
+                "console": "integratedTerminal",
+                "cwd": "${workspaceFolder}"
+            }
+        ]
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-python.python",
+            "ms-python.vscode-pylance",
+            "charliermarsh.ruff",
+            "GitHub.copilot"
+        ]
+    }
+}
